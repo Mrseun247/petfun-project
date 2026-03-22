@@ -474,14 +474,17 @@
         /* Tablet portrait: 601px – 900px */
         @media (max-width: 900px) {
             section { padding: 70px 5%; }
-            .about-grid { grid-template-columns: 1fr; gap: 35px; }
+            .about-grid { grid-template-columns: 1fr; gap: 35px; text-align: center; }
+            .about-grid .section-tag, .about-grid .section-title, .about-grid .section-sub { text-align: center; }
+            .about-features { align-items: center; }
+            .about-feature { text-align: left; }
             .contact-grid { grid-template-columns: 1fr; gap: 35px; }
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
             .footer-brand { grid-column: 1 / -1; }
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .why-grid { grid-template-columns: repeat(3, 1fr); }
             .form-row { grid-template-columns: 1fr 1fr; }
-            .hero-stats { gap: 25px; }
+            .hero-stats { gap: 25px; flex-wrap: nowrap; justify-content: center; }
         }
 
         /* Mobile: up to 768px */
@@ -502,6 +505,10 @@
             .why-grid { grid-template-columns: repeat(2, 1fr); }
             .form-row { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 25px; }
+            .footer-brand { grid-column: 1; text-align: center; }
+            .footer-col { text-align: center; }
+            .footer-col ul li a { display: inline-block; }
+            .social-links { justify-content: center; }
 
             .hero-btns { flex-direction: column; align-items: center; }
             .btn-hero-primary, .btn-hero-secondary { width: 100%; max-width: 280px; text-align: center; }
@@ -521,8 +528,8 @@
             .why-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
             .why-card { padding: 25px 15px; }
             .service-card { padding: 25px 20px; }
-            .hero-stats { flex-wrap: wrap; gap: 15px; }
-            .hero-stat { min-width: 80px; }
+            .hero-stats { flex-wrap: nowrap; gap: 15px; justify-content: center; }
+            .hero-stat { min-width: 0; flex: 1; }
             .footer-grid { gap: 20px; }
             .contact-form { padding: 20px 15px; }
             .social-links { flex-wrap: wrap; }
@@ -539,9 +546,9 @@
             .hero-title { font-size: 1.8rem; }
             .hero-motto { font-size: 1rem; }
             .hero-desc { font-size: 0.92rem; }
-            .hero-stats { gap: 12px; }
-            .hero-stat .num { font-size: 1.4rem; }
-            .hero-stat .lbl { font-size: 0.7rem; }
+            .hero-stats { gap: 10px; flex-wrap: nowrap; }
+            .hero-stat .num { font-size: 1.3rem; }
+            .hero-stat .lbl { font-size: 0.65rem; }
 
             .why-grid { grid-template-columns: 1fr; }
             .why-card { padding: 20px 15px; }
